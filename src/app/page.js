@@ -347,14 +347,14 @@ export default function Home() {
               {["avatar1.jpg", "avatar2.jpg", "avatar3.jpg"].map((file) => (
                 <Avatar
                   key={file}
-                  src={`/avatars/${file}`}
+                  src={`/avatar/${file}`}
                   size={64}
                   style={{
                     cursor: "pointer",
-                    border: user?.avatar === `/avatars/${file}` ? "2px solid #1890ff" : "2px solid transparent",
+                    border: user?.avatar === `/avatar/${file}` ? "2px solid #1890ff" : "2px solid transparent",
                   }}
                   onClick={() => {
-                    const updatedUser = { ...user, avatar: `/avatars/${file}` };
+                    const updatedUser = { ...user, avatar: `/avatar/${file}` };
                     saveUser(updatedUser);
                     message.success("Avatar updated 🎨");
                   }}
